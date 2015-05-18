@@ -8,7 +8,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.Interpolator;
 import android.widget.ListAdapter;
-import android.widget.ListView;
 
 /**
  * 
@@ -16,7 +15,7 @@ import android.widget.ListView;
  * @date 2014-8-18
  * 
  */
-public class SwipeMenuListView extends ListView {
+public class SwipeMenuListView extends XListView {
 
 	private static final int TOUCH_STATE_NONE = 0;
 	private static final int TOUCH_STATE_X = 1;
@@ -75,7 +74,7 @@ public class SwipeMenuListView extends ListView {
 							view.getPosition(), menu, index);
 				}
 				if (mTouchView != null) {
-					mTouchView.smoothCloseMenu();
+					mTouchView.closeMenu();
 				}
 			}
 		});
